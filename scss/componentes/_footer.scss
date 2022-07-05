@@ -1,0 +1,103 @@
+footer{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: nth($list: $list-font-sytle, $n:2 );
+    color: #0f0f0f;
+    text-align: justify;
+    padding: 2px 4rem;
+    margin: 0;
+    background-image: url(../images/header.png);
+    border-top: map-get($map: $footer, $key: bordes);
+    align-content: stretch;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "fLogo fUbicacion fRedes";
+    
+    #bloqueLogo{
+        @extend %display-flex-column;
+        grid-area: fLogo;
+        padding: 1rem;
+        img{
+            border-radius: 50%; 
+        }
+        p{
+            font-style: nth($list: list-font-style, $n: 1);
+            font-weight: normal;
+            font-size: nth($list: $list-font-size, $n: 2);
+            font-family: Impact, serif;
+            color: #0f0707;
+        }
+    }
+    
+    #bloqueUbicacion{display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        grid-area: fUbicacion;
+        padding: 1rem;
+    }
+    
+    #bloqueRedes {
+        @extend %display-flex-row;
+        justify-content: center;
+        align-items: center; 
+        grid-area: fRedes;
+        padding: 1rem;
+        a{
+            img{
+                border-radius: 50%;
+            }
+        }  
+    }
+}
+
+@media screen and (max-width:768px){
+    footer{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "fUbicacion fRedes";
+        
+        #bloqueLogo{
+            display: none;
+            img{
+                display: none; 
+            }
+            p{
+                display: none;
+            }
+        }
+          
+        }
+    }
+
+
+
+
+@media screen and (max-width:480px){
+    footer{
+        display: grid;
+        grid-template-rows: 1fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "fRedes";          
+        }
+
+        #bloqueUbicacion{
+            display: none;
+            iframe{
+                display: none; 
+            }
+            p{
+                display: none; 
+            } 
+        }
+
+}

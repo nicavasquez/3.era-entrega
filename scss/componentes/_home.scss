@@ -1,0 +1,129 @@
+main{
+    background-color: lighten($bg-grey2, 30%);
+    
+    div{
+        #mainImagenes{
+            @extend %display-flex-row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1rem;
+            img{
+                width: 15rem;
+                height: 12rem;
+            }
+
+        }
+    }
+    div{
+        #titulo{
+                text-align: center;
+                font-family: $font-family3;
+                font-style: $font-style1;
+                font-weight: normal;
+                font-size: 2rem;
+                color: $color-text-title;
+
+            }
+        
+        div{
+            p{
+                font-style: $font-style2;
+                font-weight: normal;
+                font-size: $font-size1;
+                font-family: $font-family1;
+                color: nth($list:$list-color , $n:4 );
+                text-align: justify;
+                padding: 2px 4rem;
+                
+                span{
+                    font-weight: bold;
+                }
+            }
+            #Intro{
+                border: solid 2px rgb(7, 7, 7);
+                background-color: nth($list:$list-bg-grey , $n:4 );
+                height: 200px;
+                overflow: auto;
+                margin: 2rem;
+            }
+            
+        }
+        div{
+            #IrEncabezado{text-decoration:none;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 1.2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+    
+            }
+            #IrEncabezado:link, #IrEncabezado:visited {
+                list-style-type: none ;
+                text-decoration: none ;
+                color: rgb(5, 5, 5); 
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    main{
+        
+        div{
+            
+            
+            div{
+                
+                
+                #Intro{
+                    display: none;
+                }
+                
+            }
+            
+        }
+    }
+
+
+}
+
+@media screen and (max-width:480px){
+    main{
+        background-color: $bg-grey2;
+        padding: 0rem;
+        div{
+            #mainImagenes{
+                
+                margin-top: 0rem;
+                img{
+                    width: 8rem;
+                    height: 6rem;
+                }
+    
+            }
+        }
+        div{
+            #titulo{
+                    
+                    font-size: 1rem;
+                    color: $color;
+                    
+    
+                }
+            
+            div{
+                p{
+                    color: $color;
+                    padding: 1rem 1rem;
+                    
+                    
+                }
+                
+                
+            }
+            
+        }        
+     
+
+
+}}

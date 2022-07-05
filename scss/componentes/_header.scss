@@ -1,0 +1,188 @@
+body {
+    div{
+        header{
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "logo redes"
+            "nav nav";
+            background-image: url(../images/header.png);
+            padding: 10px;
+            
+            #logo{
+                grid-area: logo;
+                @extend %display-flex-column;
+                padding: $font-size1;
+                img{
+                    border-radius: 50%;
+                }
+                h1{
+                    font-style: $font-style1;
+                    font-weight: normal;
+                    font-size: $font-size2;
+                    font-family: $font-family2;
+                    color: #0f0707;
+                    
+                    
+                }
+                
+            }
+            #redes{
+                grid-area: redes;
+                padding: 1rem;
+                @extend %display-flex-row;
+                justify-content: flex-end;
+                align-items: center;                
+                a{
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            nav{
+                grid-area: nav;
+                align-items: center;
+                ul{
+                    @extend %display-flex-row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    li{
+                        list-style-type: none ;
+                        text-decoration:none;
+                        font-style: $font-style1;
+                        font-weight: bold;
+                        font-size: $font-size13;
+                        font-family: $font-family1;
+                        padding: 2px;
+                        a:link, a:visited{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: $color;
+                        }
+                        a:hover{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: $color2;
+                        } 
+                        a:active{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: $color3;
+                        }
+                    }
+                }
+            }    
+        }
+    }}
+
+
+@media screen and (max-width:768px){
+
+    body {
+        div{
+            header{
+                display: grid;
+                grid-template-rows: 0.25fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                "nav nav"
+                "logo redes";
+                padding: 0.5rem;
+                
+                #logo{
+                    grid-area: logo;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    img{
+                        border-radius: 50%;
+                    }
+                    h1{
+                        text-align: center;
+                        font-family: 'Georgia', cursive;
+                        font-style: italic;
+                        font-weight: normal;
+                        font-size: 2rem;
+                        color: #0f0707;
+                        padding: 1rem 0rem;
+                        
+                        
+                    }
+                    
+                }
+                #redes{
+                    grid-area: redes;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;                 
+                    a{
+                        img{
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                
+            }
+        }}
+
+
+
+        }
+@media screen and (max-width:480px){
+    body {
+        div{
+            header{
+                display: grid;
+                grid-template-rows: 0.25fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "nav nav nav"
+                ". logo .";
+
+                #logo{
+                    grid-area: logo;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content: center;                
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    img{
+                        border-radius: 50%;
+                    }
+                    h1{
+                        text-align: center;
+                        font-family: 'Georgia', cursive;
+                        font-style: italic;
+                        font-weight: normal;
+                        font-size: 2rem;
+                        color: #0f0707;
+                        padding: 1rem 0rem;
+                        
+                        
+                    }
+                    
+                }
+                            
+                    
+                #redes{
+                                    
+                    a{
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+                
+            }
+        }}
+    }
+
